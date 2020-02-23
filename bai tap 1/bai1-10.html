@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo bảng trộn dòng cột</title>
+    <style>
+        table,tr,td{ border: 1px solid red;}
+        table{ width: 800px; margin: auto;border-collapse: collapse;}
+        img{ width: 100%; height: 150px;}
+        td{ width: 20%;}
+        #a1{ text-align: end; color: white;background-color: red; font-weight: bold; font-size: 20px;}
+        #a2{ text-align: center;color: red;background-color: pink;font-weight: bold;font-size: 30px;}
+        span{text-transform: uppercase;}
+    </style>
+</head>
+<body>
+    <table>
+        <tr>    
+            <td id="a1" colspan="3">Công nghệ dầu gội đầu dưỡng tóc mới</td>
+            <td rowspan="3"><img src="img/16.gif" alt="no"></td>
+        </tr>
+        <tr><td colspan="3"></td></tr>
+        <tr>
+            <td id="a2" colspan="3">Tỏa sáng cùng <span>double rich</span></td>
+        </tr>
+        <tr>
+           
+            <td colspan="2" style="width:50%">
+                <ul>
+                    <li>Sản phẩm khuyến mại: 
+                        <ul><li>Dầu gội Double Rich mới 200ml có tem khuyến mại</li></ul>
+                    </li>
+                    <li>Đói tượng tham gia: 
+                        <ul>
+                            <li>Áp dụng cho tất cả người tiêu dùng cuối cùng mua sản phẩm</li>
+                            <li>Chương trình không áp dụng cho nhân viên và các nhà phân phối,
+                                Chương trình không áp dụng cho nhân viên và các nhà phân phối,<br>
+                                Chương trình không áp dụng cho nhân viên và các nhà phân phối,<br>
+                                Chương trình không áp dụng cho nhân viên và các nhà phân phối,<br>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </td>
+
+            <td colspan="2">
+                <ul>
+                    <li>Cách thức nhận giải: 
+                        <ol>
+                            <li>1.Giải khuyến khích: khách hàng đổi quà tại các điểm bán lẻ trên toàn quốc</li>
+                            <li>Giải đặc biệt ,nhất,nhì: khách hàng cắt phần mã vạch trên mỗi chai dầu gội có khuyến mại và gói kèm phiếu trúng thưởng</li>
+                        </ol>
+                    </li>
+                </ul>
+            </td>
+            
+        </tr>
+    </table>
+</body>
+</html>

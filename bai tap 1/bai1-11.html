@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Tạo form và các điều khiển trên form</title>
+    <style>
+        h1{color: red;text-align: center;}
+        table,tr,td{border: 1px solid black;background-color: rgb(83, 157, 226);margin: auto;}
+    </style>
+    <script>
+        function LayMa(){
+                var x = document.nhap.ten.value;
+                document.nhap.ma.value = x;
+        }
+    </script>
+</head>
+<body>
+    <h1>Đăng Nhập</h1>
+    <form action="#" name="nhap">
+        <table >
+            <tr>
+                <td>Mã người dung: </td>
+                <td><input type="text" id="ten"></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu: </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2"><button onclick="LayMa()">Đồng ý</button></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2"><output id="ma"></output></td>
+            </tr>
+        </table>
+        
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo bảng trộn dòng và cột</title>
+    <style>
+        h1{color: #cc0033;text-align: center;}
+        th{color: white; background-color: #cc0033;}
+        table,tr,th,td{border: 1px solid black; border-collapse: collapse;}
+        table{
+            width: 500px;font-family: tahoma;margin: auto; 
+        }
+        .a1{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>Chương trình học - nghành Lập Trình</h1>
+    <table>
+        <tr>
+            <th rowspan="2">Khóa học phần</th>
+            <th rowspan="2">Môn học</th>
+            <th colspan="2">Số Tiết</th>
+        </tr>
+        <tr>
+            <th>Lý thuyết</th>
+            <th>Thực hành</th>
+        </tr>
+        <tr>
+            <td rowspan="6" class="a1">Tin học văn phòng</td>
+            <td>Hệ điều hành Window</td>
+            <td>3</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Sử dụng internet</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>MS Word</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>MS Powerpoint</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>MS Excel</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>MS FontPage</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="a1">Ký thuật lập trình</td>
+            <td>Nhập môn lập trinhd</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td >Kỹ thuật lập trình</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr><td colspan="4">...</td></tr>
+    </table>
+</body>
+</html>
