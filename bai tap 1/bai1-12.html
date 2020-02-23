@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form và các điều khiển</title>
+    <style>
+        h1{color: green;text-align: center;}
+        table,tr,td{ border: 1px solid black; width: 500px;background-color: rgb(83, 157, 226);margin: auto;}
+    </style>
+    <script>
+        function kiemtra(){
+        var x = "Bạn đã đăng ký thành công!!!";
+        document.nhap.kq.value = x;
+        }
+    </script>
+</head>
+<body>
+    <h1>Phiếu đăng ký tham gia khuyến mại</h1>
+    <form action="#" name="nhap">
+    <table>
+        <tr>
+            <td>Họ và tên: </td>
+            <td><input type="text" id="ten"></td>
+        </tr>
+        <tr>
+            <td>Địa chỉ: </td>
+            <td><input type="text" id="dc"></td>
+        </tr>
+        <tr>
+            <td>Điện thoại:  </td>
+            <td><input type="text" id="dt"></td>
+        </tr>
+        <tr>
+            <td>Giới tính: </td>
+            <td><input type="radio" id="gt" value="0">Nam
+                <input type="radio" id="gt" value="1">Nữ
+            </td>
+        </tr>
+        <tr>
+            <td>Nghề nghiệp:  </td>
+            <td>
+                <select name="nn" id="nn">
+                    <option value="1">Giáo viên</option>
+                    <option value="2">Nông dân</option>
+                    <option value="3">Bác sĩ</option>
+                    <option value="4">Kỹ sư</option>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Sản phẩm tham gia: </td>
+            <td>
+                <select name="sp" id="sp">
+                    <option value="1">Kem đánh răng</option>
+                    <option value="2">Dầu gội</option>
+                    <option value="3">Sữa tắm</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Số người dự đoán tham gia:  </td>
+            <td><input type="text" id="so"></td>
+        </tr>
+        <tr>
+            
+            <td style="text-align: center;" colspan="2"><input type="button" onclick="kiemtra();" id="ok" value="Đồng ý" ></td>
+        </tr>
+        <tr>
+            
+            <td style="text-align: center;" colspan="2"><output id="kq"></output>
+        </tr>
+    </table></form>
+</body>
+</html>
