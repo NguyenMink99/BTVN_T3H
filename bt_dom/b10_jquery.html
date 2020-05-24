@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Justice League se tai sinh vao nam 2021</h1>
+    <p id="text"> Nhờ chiến dịch vận động của người hâm mộ, tác phẩm Justice League (tựa Việt: Liên minh công lý) của DC
+        sẽ được<span>
+            chiếu trở lại vào năm 2021 nhưng với một hình hài khác.
+            Trả lời trên Hollywood Reporter, đạo diễn Zack Snyder chia sẻ về bản phim Justice League mới: "Nó sẽ là bản
+            phim
+            hoàn chỉnh, đặc biệt đối với những khán giả nào đã từng xem qua bản trước đó". Thế nhưng ông không đưa ra
+            bình
+            luận gì về bản phim của đạo diễn Joss Whedon. Có nhiều tin đồn lan truyền rằng bản phim mới của nhà làm phim
+            sinh năm 1966 sẽ đen tối và đầy đủ hơn bản phim ra rạp cách nay ba năm. </span>
+         </p>
+    <button id="btnMore" >Show More</button>
+    <button id="btnLess" >Show Less</button>
+    <script>
+        $(document).ready(function(){
+            $("span").hide(); $("#text").append("...");
+            $("#btnLess").click(function(){
+                $("span").hide();
+            })
+            $("#btnMore").click(function(){
+                $("span").show();
+            });
+        });
+    </script>
+</body>
+
+</html>

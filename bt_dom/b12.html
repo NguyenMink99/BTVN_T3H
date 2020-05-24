@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="nhap" action="#">
+        So luong <input type="text" name="sol" id="sol"><br>
+        Don Gia <input type="text" name="dg" id="dg"><br>
+        Thanh Tien <input type="text" name="tt" id="tt"><br>
+        <button onclick="Calculation()">Calculation</button>
+    </form>
+    <script>
+        function Calculation()
+        {
+            var sol = parseInt(document.nhap.sol.value);//chuyen chuoi ve so nguyen
+            var dg = parseInt(document.nhap.dg.value);
+            var tt = sol * dg;
+            document.nhap.tt.value = tt;
+        }
+        
+
+    </script>
+</body>
+
+</html>

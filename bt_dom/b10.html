@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Justice League se tai sinh vao nam 2021</h1>
+    <p id="text"> Nhờ chiến dịch vận động của người hâm mộ, tác phẩm Justice League (tựa Việt: Liên minh công lý) của DC
+        sẽ được
+        chiếu trở lại vào năm 2021 nhưng với một hình hài khác.
+        Trả lời trên Hollywood Reporter, đạo diễn Zack Snyder chia sẻ về bản phim Justice League mới: "Nó sẽ là bản phim
+        hoàn chỉnh, đặc biệt đối với những khán giả nào đã từng xem qua bản trước đó". Thế nhưng ông không đưa ra bình
+        luận gì về bản phim của đạo diễn Joss Whedon. Có nhiều tin đồn lan truyền rằng bản phim mới của nhà làm phim
+        sinh năm 1966 sẽ đen tối và đầy đủ hơn bản phim ra rạp cách nay ba năm. </p>
+    <button id="btnMore" onclick="ShowMore()">Show More</button>
+    <button id="btnLess" onclick="ShowLess()">Show Less</button>
+    <script>
+        let txt = document.getElementById("text").innerHTML;//Lay noi dung cua text
+        let showText = document.getElementById("text");//Gan text vao bien de lua chon hien thi
+        let btnMore = document.getElementById("btnMore");//Lay button More
+        let btnLess = document.getElementById("btnLess");//Lay button Less
+        let maxLenght = 120;
+        function ShowText() {
+            if (txt.length <= maxLenght) //Neu txt <= maxLenght thi hien thi text va hide button 
+            {
+                showText.innerHTML = txt;
+                btnMore.style.display = 'none';
+                btnLess.style.display = 'none';
+            }
+            else { //Neu txt qua dai thi chuyen vao getShortText de rut ngan
+                let shortText = getShortText(txt);
+                showText.innerHTML = shortText;
+            }
+        }
+        function ShowMore() {
+            showText.innerHTML = txt;
+        }
+        function ShowLess() {
+            let shortText = getShortText(txt);
+            showText.innerHTML = shortText;
+        }
+        function getShortText(str) {
+            return str.substr(0, maxLenght) + "...";
+        }
+        //Goi ham de thuc thi
+        ShowText();
+    </script>
+</body>
+
+</html>

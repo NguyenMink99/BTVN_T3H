@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function red()
+    {
+      document.bgColor = document.getElementById("red").value;//ko the dung getClass vi no tra ve 1 array
+    }
+    function blue()
+    {
+      document.bgColor = document.getElementById("blue").value;
+    }
+  </script>
+  
+  <div id="message">This is document</div>
+  <input type="button" value="red" id="red" onclick="red()"/>
+  <button  value="blue" id="blue" onclick="blue()">Blue</button>
+</body>
+</html>

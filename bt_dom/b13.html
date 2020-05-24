@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+    </head>
+
+    <body>
+
+        <form name="formClock" action="#">
+            <input type="text" name="clock" size="20" value="00:00:00">
+            <input type="button" onclick="start()" value="Start">
+            <input type="button" onclick="stop()" value="Stop">
+            <input type="button" onclick="reset()" value="Reset">
+
+        </form>
+
+        <script type="text/javascript">
+            var msec = 0;
+            var sec = 0;
+            var min = 0;
+            let go;
+
+            function start() {
+                document.formClock.clock.value = min + ":" + sec + ":" + msec;
+                go = setTimeout(start, 1);
+                msec++;
+
+                if (msec == 100) {
+                    msec = 0;
+                    sec++;
+                }
+                if (sec == 60) {
+                    sec = 0;
+                    min++;
+                }
+            }
+            function stop() {
+                clearTimeout(go);
+            }
+            function reset() {
+                window.location.reload();
+            }
+        </script>
+        
+    </body>
+
+    </html>
+</body>
+
+</html>

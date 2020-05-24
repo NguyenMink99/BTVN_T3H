@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="nhap">
+        <button name="wel" onclick="Check()">Welcome</button>
+        <input type="text" name="year" >
+    </form>
+    <script> 
+        function Check() {
+            var year = (document.nhap.year.value);
+            var present = new Date().getFullYear();
+            var flag = true;
+            if(year>present){
+                flag = false;
+                do{
+                alert("Vui long nhap lai nam sinh: ");
+                break;
+            }while(flag==false)
+        }
+            else
+                document.write(year);
+           
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="nhap">
+        <button onclick="Age()">Welcome</button>
+        <input type="text" name="year" >
+    </form>
+    <script>
+        function Age() {
+            var year = (document.nhap.year.value);
+            var present = new Date().getFullYear();
+            var age = present - year;
+            document.write("So tuoi hien tai la: " + age);
+        }
+    </script>
+</body>
+
+</html>

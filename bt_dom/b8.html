@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Document</title>
+</head>
+
+<body onload="start()"><!-- body duoc thuc thi khi trinh duyet da load xong JS-->
+    <script>
+
+         function start() {
+            //Object hien tai
+            var date = new Date();
+            //lay hour,minutes,seconds
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            //Chuyen sang dang 01,02,03
+            m = Checktime(m);
+            s = Checktime(s);
+            //In ra trinh duyet
+            document.getElementById("title").innerHTML = h + ":" + m + ":" + s;
+        }
+
+        //Dung setInterval de loop 0.5s/lan
+        //ham start goi trong ham setInterval nen no duoc thuc thi
+        var loop = setInterval(start, 500);
+        //Ham Check
+        function Checktime(i) {
+            if (i < 10)
+                i = "0" + i;
+            return i;
+        }
+        
+    </script>
+    <div id="timer"></div>
+</body>
+
+</html>

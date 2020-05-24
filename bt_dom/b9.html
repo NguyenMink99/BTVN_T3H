@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function updatetime()//ham updatetime duoc thuc thi khi trinh duyet load xong JS
+         {
+            let showtime = document.getElementById("ok");
+            showtime.innerHTML = new Date().toLocaleString()//toLocaleString bien number thanh chuoi bieu dien so
+            //ham setInterval dong vai tro nhu 1 loi goi ham
+            let loop = setInterval(updatetime, 1000);
+        }
+
+    </script>
+    <div id="ok"></div>
+</body>
+
+</html>
