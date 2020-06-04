@@ -1,64 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!DOCTYPE html>
     <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+      </head>
 
-    </head>
-
-    <body>
-
+      <body>
         <form name="formClock" action="#">
-            <input type="text" name="clock" size="20" value="00:00:00">
-            <input type="button" onclick="start()" value="Start">
-            <input type="button" onclick="stop()" value="Stop">
-            <input type="button" onclick="reset()" value="Reset">
-
+          <input type="text" name="clock" size="20" value="00:00:00" />
+          <input type="button" onclick="start()" value="Start" />
+          <input type="button" onclick="stop()" value="Stop" />
+          <input type="button" onclick="dat_lai()" value="Reset" />
         </form>
 
         <script type="text/javascript">
-            var msec = 0;
-            var sec = 0;
-            var min = 0;
-            let go;
+          var msec = 0;
+          var sec = 0;
+          var min = 0;
+          var go;
 
-            function start() {
-                document.formClock.clock.value = min + ":" + sec + ":" + msec;
-                go = setTimeout(start, 1);
-                msec++;
+          function start() {
+            document.formClock.clock.value = min + ":" + sec + ":" + msec;
+            go = setTimeout(start, 10);
+            msec++;
 
-                if (msec == 100) {
-                    msec = 0;
-                    sec++;
-                }
-                if (sec == 60) {
-                    sec = 0;
-                    min++;
-                }
+            if (msec == 100) {
+              msec = 0;
+              sec++;
             }
-            function stop() {
-                clearTimeout(go);
+            if (sec == 60) {
+              sec = 0;
+              min++;
             }
-            function reset() {
-                window.location.reload();
+          }
+          function stop() {
+            clearTimeout(go);
+          }
+          function dat_lai() {
+            clearTimeout(go);
+            document.formClock.clock.value = "00:00:00";
+                msec = 0;
+                sec = 0;
+                min = 0;
             }
         </script>
-        
-    </body>
-
+      </body>
     </html>
-</body>
-
+  </body>
 </html>

@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <form name="nhap" action="#">
-        So luong <input type="text" name="sol" id="sol"><br>
-        Don Gia <input type="text" name="dg" id="dg"><br>
-        Thanh Tien <input type="text" name="tt" id="tt"><br>
-        <button onclick="Calculation()">Calculation</button>
+  <body>
+    <form action="#" name="nhap">
+      So luong <input type="text" name="sol" id="sol" /><br />
+      Don Gia <input type="text" name="dg" id="dg" /><br />
+      Thanh Tien <input type="text" name="tt" id="tt" /><br />
+      <button type="button" onclick="Calculation()">Calculation</button>
+      <!--Can co thuoc tinh type de trach bi load page do button + form = submit -->
     </form>
     <script>
-        function Calculation()
-        {
-            var sol = parseInt(document.nhap.sol.value);//chuyen chuoi ve so nguyen
-            var dg = parseInt(document.nhap.dg.value);
-            var tt = sol * dg;
-            document.nhap.tt.value = tt;
-        }
-        
-
+      function Calculation() {
+        var sol = parseInt(document.getElementById("sol").value); //chuyen chuoi ve so nguyen
+        var dg = parseInt(document.getElementsByTagName("input")[1].value);
+        var tt = sol * dg;
+        document.getElementsByName("tt")[0].value = tt;
+        //C2: document.nhap.tt.value = tt;
+      }
     </script>
-</body>
-
+  </body>
 </html>
